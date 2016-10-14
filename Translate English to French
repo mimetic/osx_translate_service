@@ -4,14 +4,14 @@ on run {input, parameters}
 	-- for testing
 	--set input to "I love Paris in the winter."
 	
-  -- Put your Google API code here.
-  set myAPICode to "???"
-  
 	set theText to encodeText(input as text, false, false)
 	
+	set myAPICode to "???"
+	
+	set sourceLang to "en"
 	set targetLang to "fr"
 	set theURL to "https://www.googleapis.com/language/translate/v2"
-	set theArgs to "key=" & myAPICode & "&source=en&target=" & targetLang & "&q=" & theText
+	set theArgs to "key=" & myAPICode & "&source=" & sourceLang & "&target=" & targetLang & "&q=" & theText
 	
 	set theResult to do shell script "curl " & quoted form of (theURL & "?" & theArgs)
 	set theResult to decode(theResult)
