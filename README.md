@@ -1,8 +1,19 @@
 # osx_translate_service
-An AppleScript service to translate the current selected text.
+An AppleScript service to translate the current selected text. 
 
 
 Before you begin:
+
+- You must fill in a working Google API key
+- You can change the source and target languages in the AppleScript code
+
+To Install:
+- In Apple's OS X Automator app, create a new "Service".
+- Add a "Run Applescript" entry
+- The service will receive text from any application, and check "Output replaces selected text."
+- Paste the AppleScript from this git into the AppleScript.
+- Fill in your own Google API key.
+- Save
 
 See: https://cloud.google.com/translate/v2/translating-text-with-rest
 
